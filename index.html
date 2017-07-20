@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="style/main.css" />
+	</head>
+	<body>
+		
+		<div class="disk_wrap">
+		<div class="imgShowBox">
+			<div class="imgShow"></div>
+			<button class="btnimg"></button>
+		</div>
+		<section class="left">
+			<div class="left_menu">
+				<div class="user"></div>
+				<div class="disk"></div>
+				<div class="chat"></div>
+				
+				<div class="rubbish"></div>
+				<div class="set"></div>
+			</div>
+			<div class="left_list">
+				<div class="titlelist">
+					我的云盘
+				</div>
+				<ul class="list">
+					<li>
+						<span>标题1</span>
+						<ul>
+							<li>
+								<span>标题一</span>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>标题2</span>
+						<ul>
+							<li>
+								<span>标题一</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="left_scroll"></div>
+		</section>
+		
+		
+		<section class="main">
+			
+			<div class="message"></div>
+			<div class="confirm">
+				<span></span>
+				<div class="text">你确定要删除吗</div>
+				<div class="click">
+					<div class="checkbox active"></div>
+					<strong >不再显示</strong>
+					<button>是</button>
+					<button>否</button>
+				</div>
+			</div>
+			<div class="cover">
+				<h1>重复的项目</h1>
+				<span class="coverNum">你有3个文件重名了大哥.</span>
+				<span>请对文件进行相应的操作:</span>
+				<ul class="flieCover">
+					<li>
+						<span>文件一</span>
+						<div class="flieCover-btn">
+							<button>覆盖</button>
+							<button>新建</button>
+							<button>忽略</button>
+						</div>
+					</li>
+				</ul>
+				
+				<div class="fileCoverBtn">
+					<button>取消移动</button>
+					<button>确定</button>
+				</div>
+			</div>
+			
+			<div class="banner">
+				<div class="row">
+					<span class="headico"></span>
+					<span class="searchbtn"></span>
+					<input class="searchtext" />
+					<span class="mes"></span>
+					<span class="menu_use"></span>
+				</div>
+				<div class="rightmenu">
+					<div class="shutico"></div>
+					<ul class="col_ul">
+						<li>我的账户</li>
+						<li>升级</li>
+						<li>导出我的密钥</li>
+						<li>登出</li>
+						<li>帮助中心</li>
+						<li>经销商</li>
+						<li>关于我们</li>
+						<li>私隐公司</li>
+						<li>联系我们</li>
+						<li>反馈</li>
+						<li>应用</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="button">
+				<div class="nav">
+					<a href="javascript:;">全部文件> </a>
+				</div>
+				<div class="btn">
+					<button>上传</button>
+					<button>新建文件夹</button>
+					<button>删除</button>
+					<button>重命名</button>
+					<button>全选</button>
+					<button></button>
+				</div>
+			</div>
+			
+			<div class="file-box">
+				<div class="file-container">
+					<div class="fileitem">
+						<div class="pic"></div>
+						<div class="name">
+							<span>新建文件夹</span>
+							<input type="text" value="重命名" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="listShow">
+					<div class="moveplace">
+						<button class="active"></button><button></button>
+					</div>
+					<ul class="rubbishBox">
+						
+					</ul>
+					<ul class="listShowBox">
+						
+					</ul>
+					<div class="listBtn">
+						<button class="listBtnConfirm">移动</button>
+						<button class="listBtnCancel">取消</button>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		</div>
+		<script src="./script/data.js"></script>
+		<script src="./script/tool.js"></script>
+		<script src="./script/view.js"></script>
+		<script src="./script/main.js"></script>
+	</body>
+</html>

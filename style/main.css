@@ -1,0 +1,1066 @@
+
+body,html{
+	cursor: url(../image/sort.png);
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul{margin: 0;padding: 0;list-style: none;}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+span::selection,button::selection,div::selection,a::selection{
+	background: none;
+}
+
+.disk_wrap{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+}
+
+.left{
+	display: flex;
+	width: 320px;
+	position: relative;
+}
+.left_menu{
+	flex: 1;
+	height: 100%;
+	min-width: 40px;
+	background: #222222;
+	position: relative;
+}
+.left_list{
+	overflow: auto;
+	padding: 10px 0px 0px 20px;
+	box-sizing:border-box ;
+	flex: 4;
+	height: 100%;
+	background: #FFF7E2;
+	position: relative;
+}
+
+/*回收站*/
+.left.rec .left_list{
+	background: gray;
+}
+.left.rec .left_list ul span:hover{
+	color:cornsilk;
+}
+.left.rec .left_list ul span strong{
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	left: -32px;
+	top: 4px;
+	background:url(../image/filecanshow.png)no-repeat ;
+	background-size: 100% ;
+}
+.left.rec .left_list ul span em{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: -20px;
+	top: 0px;
+	background:url(../image/recycle/file.png)no-repeat ;
+	background-size: 100% ;
+}
+
+/*回收站*/
+
+.titlelist{
+	width: 100%;
+	height: 60px;
+	background: indianred;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.left.rec .titlelist{
+	background: green;
+}
+.left_list .list{
+	position: absolute;
+	top: 80px;
+}
+.left_list ul{
+	cursor: pointer;
+	padding: 4px 24px;
+	font-size: 14px;
+}
+.left_list  li{
+	padding-top: 4px;
+}
+.left_list ul ul{
+	display: none;
+}
+
+.left_list ul span {
+	padding-left: 8px;
+	position: relative;
+	display: block;
+}
+.left_list ul span:hover{
+	color: orange;
+}
+.left_list ul span strong{
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	left: -32px;
+	top: 0px;
+	background:url(../image/filecanshow.png)no-repeat ;
+	background-size: 100% ;
+}
+.left_list ul span em{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: -18px;
+	top: 0px;
+	background:url(../image/file.png)no-repeat ;
+	background-size: 100% ;
+}
+
+.left_list ul span em.img{
+	top: 6px;
+	left: -18px;
+	width: 20px;
+	height: 20px;
+}
+.left_list ul  ul.active{
+	display: block;
+}
+.left_list ul span strong.active{
+	background:url(../image/fileshow.png)no-repeat ;
+	background-size: 100% ;
+}
+
+
+.left_scroll{
+	cursor: w-resize;
+	width: 4px;
+	height: 100%;
+	background: #d6d6d6;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 99;
+}
+
+.left.rec .left_scroll{
+	background: black;
+}
+.left_menu div{
+	cursor: pointer;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	background-size:100% 100% ;
+	left: calc(50% - 15px);
+}
+
+.left_menu div:nth-of-type(1){
+	background: url(../image/userico.png)no-repeat center center;
+	background-size:100% 100% ;
+	top: 50px;
+}
+.left_menu div:nth-of-type(2){
+	background: url(../image/diskico.png)no-repeat center center;
+	background-size:100% 100% ;
+	top: 100px;
+	position: relative;
+}
+.left_menu div:nth-of-type(2):after{
+	content: "";
+	position: absolute;
+	left: -10px;
+	top: 0;
+	width: 2px;
+	height: 100%;
+	transition: 500ms;
+	background-color: indianred;
+}
+.left_menu div:nth-of-type(2):hover::after {
+  background-color: sandybrown;
+}
+.left_menu div:nth-of-type(3){
+	background: url(../image/chatico.png)no-repeat center center;
+	background-size:100% 100% ;
+	top: 150px;
+}
+
+.left_menu div:nth-of-type(4){
+	background: url(../image/rubblishico.png)no-repeat center center;
+	background-size:100% 100% ;
+	bottom: 50px;
+}
+.left_menu div:nth-of-type(4):after{
+	content: "";
+	position: absolute;
+	left: -10px;
+	top: 0;
+	width: 2px;
+	height: 100%;
+	transition: 500ms;
+	background-color: indianred;
+}
+.left_menu div:nth-of-type(4):hover::after {
+  background-color: green;
+}
+.left_menu div:nth-of-type(5){
+	background: url(../image/setico.png)no-repeat center center;
+	background-size:100% 100% ;
+	bottom: 100px;
+}
+.main{
+	flex: 1;
+	height: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+.message{
+	z-index:100;
+	position:absolute;
+	padding: 0px 20px;
+	width: 200px;
+	height: 0px;
+	border-radius:8px;
+	left: calc(50% - 180px);
+	top: -40px;
+	font:16px/30px "微软雅黑";
+	text-align: center;
+	transition:all 500ms;
+}
+.message.succ{
+	background:rgba(0,128,0,0.5) url(../image/succ.png)no-repeat 10px center;
+	background-size:8% ;
+	color: seashell;
+}
+.message.fail{
+	background:rgba(205,92,92,0.8) url(../image/error.png)no-repeat 10px center;
+	background-size:10% ;
+	color: black;
+}
+
+
+
+.confirm{
+	display: none;
+	width: 500px;
+	height: 200px;
+	background: #fff;
+	z-index: 100;
+	border: 2px solid #a5a5a5;
+	border-radius: 8px;
+	position: absolute;
+	left: calc(50% - 320px);
+	top: calc(50% - 100px);
+}
+.confirm span{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url(../image/shut.png)no-repeat center;
+	background-size: 100%;
+	right: 6px;
+	top: 6px;
+}
+
+.confirm .text{
+	width: 100%;
+	height: 80%;
+	background: url(../image/ccircle.png)no-repeat left 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: #898989;
+	background-size:40% ;
+}
+.confirm .click {
+	width: 100%;
+	height: 20%;
+	border-top: 1px solid #e5e5e5;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	align-items: center;
+	font-size:16px;
+}
+.click div{
+	width: 16px;
+	height: 16px;
+	border: 1px solid #BBADA0;
+	margin-left: 30px;
+}
+.click strong{
+	font-weight: normal;
+	font-size: 14px;
+	margin-left: 10px;
+	color: #878787;
+}
+.click div.active{
+	background: url(../image/gouzi.png)no-repeat center;
+	background-size:100% ;
+}
+.click button{
+	outline: none;
+	position: absolute;
+	margin: auto;
+	width: 60px;
+	height: 60%;
+	background: #fff;
+	border: 1px solid #a5a5a5;
+	border-radius:6px ;
+}
+.click button:nth-of-type(1){
+	right: 76px;
+}
+.click button:nth-of-type(2){
+	right: 10px;
+}
+.click button:hover{
+	box-shadow:0px 0px 8px gray ;
+}
+
+
+/*覆盖弹窗*/
+
+.cover{
+	transform:scale(0);
+	transition: 300ms;
+	position: relative;
+	flex-direction: column;
+	padding-left: 20px;
+	box-sizing: border-box;
+	z-index: 100;
+	position: absolute;
+	width:562px;
+	height: 620px;
+	left: calc(50% - 400px);
+	top: 8px;
+	border-radius:8px ;
+	border: 2px solid #949494;
+	background-color:#fff;
+}
+.cover.active{
+	transform:scale(1);
+}
+.cover h1{
+	font: 18px/30px "微软雅黑";
+	color:#999999;
+	text-align: center;
+}
+.cover span{
+	display: block;
+}
+.cover span:nth-of-type(1){
+	font:14px/30px"微软雅黑";
+	color: #666666;
+}
+.cover span:nth-of-type(2){
+	font:16px/30px"微软雅黑";
+	color:#999999;
+}
+
+.cover .flieCover{
+	padding: 10px;
+	box-sizing: border-box;
+	overflow: auto;
+	width: 450px;
+	height: 400px;
+	background: #FFF7E2;
+	box-shadow: 2px 2px 8px black;
+}
+
+.flieCover li{
+	transition: 200ms;
+	position: relative;
+	margin-bottom: 10px;
+	width:400px;
+	height: 120px;
+	background:#fff url(../image/paper.png)no-repeat 10px 46px ;
+	background-size:6% ;
+	border-radius:6px ;
+	box-shadow: 0px 0px 4px #3B2835;
+}
+.flieCover li.active{
+	height: 0;
+	opacity: 0;
+}
+.cover .flieCover span{
+	display: block;
+	position: absolute;
+	left: 100px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font:18px/24px "微软雅黑";
+}
+
+.flieCover  .flieCover-btn{
+	position: absolute;
+	right: 20px;
+	top: 4px;
+	width: 100px;
+	display: flex;
+	flex-direction: column;
+}
+.flieCover-btn button{
+	margin-top: 4px;
+	width: 100px;
+	height: 30px;
+	background: #FFF5EE;
+	color: slategray;
+	border:1px solid #a5a5a5 ;
+	border-radius:5px ;
+}	
+.cover .fileCoverBtn{
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	background: #FFF7E2;
+	border-top:1px solid #a5a5a5 ;
+}
+.fileCoverBtn button{
+	position: absolute;
+	top: calc(50% - 15px);
+	width: 100px;
+	height: 30px;
+	background: #FFF5EE;
+	color: slategray;
+	border:1px solid #a5a5a5 ;
+	border-radius:5px ;
+}
+.fileCoverBtn button:nth-of-type(1){
+	right: 120px;
+}
+.fileCoverBtn button:nth-of-type(2){
+	right: 10px;
+}
+.banner{
+	box-sizing: border-box;
+	width: 100%;
+	height: 5%;
+	border-bottom: 2px solid #d6d6d6;
+	position: relative;
+	background: seashell;
+}
+/*回收站*/
+.banner.rec{
+	border-bottom: 2px solid black;
+}
+.rightmenu{
+	position: absolute;
+	opacity: 0;
+	right: -50px;
+	width: 0;
+	background: #fff;
+	z-index: 99;
+	transition: 500ms;
+}
+ .row{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	height: 28px;
+	right: 0;
+	top: 2px;
+	transition: 500ms;
+}
+ .row span,input{
+	padding: 0;
+	outline: none;
+	display: inline-block;
+	margin-left: 6px;
+	width: 24px;
+	height: 28px;
+}
+ .row .headico{
+	background: url(../image/headico.png)no-repeat center center;
+	background-size:100% ;
+}
+.row .searchbtn{
+	background: url(../image/search.png)no-repeat center center;
+	background-size:100% ;
+}
+ .row .searchtext{
+ 	margin: 0;
+	transition: 200ms;
+	width: 0;
+	height: 0;
+	border: none;
+	color: grey;
+}
+.row .searchtext.active{
+	border: 2px solid orange;
+	width: 120px;
+	padding-left: 10px;
+	border-radius:10px;
+	height: 16px;
+
+}
+ .row .mes{
+	background: url(../image/message.png)no-repeat center center;
+	background-size:100% ;
+}
+ .row .menu_use{
+	background: url(../image/showmenu.png)no-repeat center center;
+	background-size:100% ;
+}
+.rightmenu .shutico{
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	right: 4px;
+	top: 2px;
+	width: 20px;
+	height: 20px;
+	background: url(../image/shut.png)no-repeat center center;
+	background-size: 100%;
+}
+
+.col_ul{
+	border-radius:6px ;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.col_ul li{
+	height: 20px;
+	padding: 16px;
+	font: 14px/16px "微软雅黑";
+}
+.col_ul li:hover{
+	background:#CCCCFF;
+}
+
+.button{
+	width: 100%;
+	height: 7%;
+	box-sizing: border-box;
+	border-bottom:2px solid #d6d6d6 ;
+	position: relative;
+	display: flex;
+	background: #FFF7E2;
+}
+/*回收站*/
+.button.rec{
+	border-bottom:2px solid black ;
+	background: #FFF7E2;
+}
+.nav{
+	box-sizing: border-box;
+	padding-left: 40px;
+	display: flex;
+	height: 100%;
+	width: 500px;
+	align-items: center;
+}
+.nav a{
+	color: #999999; 
+	font-size: 16px;
+}
+.nav a:hover{
+	color: sandybrown;
+}
+
+
+.btn{
+	right: 10px;
+	height: 100%;
+	display: flex;
+	position: absolute;
+}
+.btn button{
+	margin-left: 8px;
+	text-align: left;
+	padding-left: 24px;
+	height: 100%;
+	box-sizing: border-box;
+	border: none;
+	font-size:16px ;
+	box-sizing:border-box ;
+	color: #999999;
+	outline: none;
+}
+.btn button{
+	background: url(../image/upload.png)no-repeat 0px center;
+	background-size:30% ;
+}
+.btn button:hover{
+	background: url(../image/uploadhover.png)no-repeat 0px center;
+	background-size:30% ;
+	color: red;
+}
+.btn button:nth-of-type(2){
+	background: url(../image/addfile.png)no-repeat 0px center;
+	background-size:22% ;
+}
+.btn button:nth-of-type(2):hover{
+	background: url(../image/addfilehover.png)no-repeat 0px center;
+	background-size:22% ;
+}
+.btn button:nth-of-type(3){
+	background: url(../image/delete.png)no-repeat 0px center;
+	background-size:30% ;
+}
+.btn button:nth-of-type(3):hover{
+	background: url(../image/deletehover.png)no-repeat 0px center;
+	background-size:30% ;
+}
+.btn button:nth-of-type(4){
+	background: url(../image/rename.png)no-repeat 0px center;
+	background-size:24% ;
+}
+.btn button:nth-of-type(4):hover{
+	background: url(../image/renamehover.png)no-repeat 0px center;
+	background-size:24% ;
+}
+.btn button:nth-of-type(5){
+	background: url(../image/select.png)no-repeat 0px center;
+	background-size:28% ;
+}
+.btn button:nth-of-type(5):hover{
+	background: url(../image/selecthover.png)no-repeat 0px center;
+	background-size:28% ;
+}
+.btn button:nth-of-type(6){
+	background: url(../image/defaultStyle.png)no-repeat center;
+	width: 30px;
+	height: 98%;
+	outline: none;
+	background-size:60% ;
+}
+.btn button:nth-of-type(6).active{
+	background: url(../image/columStyle.png)no-repeat center;
+	background-size:60% ;
+}
+
+/*回收站*/
+.btn.rec button{
+	display: none;
+}
+.btn.rec button:nth-of-type(6){
+	display: block;
+}
+.btn.rec button:nth-of-type(7){
+	display: block;
+	background: none;
+}
+/*回收站*/
+.file-box{
+	position: relative;
+	width: 100%;
+	height: 88%;
+	box-sizing: border-box;
+}
+.file-container{
+	padding: 20px 0px 0px 10px;
+	overflow: auto;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #F6F6F6;
+}
+.file-container .fileitem{
+	cursor: pointer;
+	position: relative;
+	float: left;
+	margin: 0px 20px 20px 0px;
+	width: 128px;
+	height: 152px;
+	border: 2px solid transparent;
+	position: relative;
+	background: #fff;
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+
+.file-container .fileitem:hover{
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+.file-container .fileitem .pic{
+	margin: 2px auto;
+	width: 128px;
+	height: 130px;
+	background:url(../image/file.png)no-repeat center;
+	background-size:80% ;
+	border-radius:5px ;
+}
+.file-container .fileitem .pic.img{
+	margin: 2px auto;
+	width: 128px;
+	height: 130px;
+	background:url(../image/pic/timg.jpg)no-repeat center;
+	background-size:100% ;
+}
+
+.file-container .fileitem.active{
+	background-color:#FFDEAD;
+	border-radius:5px ;
+	box-shadow: 4px 4px 16px rgba(0,0,0,0.5);
+}
+
+.file-container .fileitem .name{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+}
+.file-container .fileitem .name span{
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.file-container .fileitem .name input{
+	display:none;
+	text-align: center;
+	width: 80%;
+	height: 20px;
+	background:#f6f6f6;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+	border: none;
+}
+
+
+/*回收站*/
+.file-container.rec .fileitem .pic{
+	background: url(../image/recycle/file.png)no-repeat center;
+	background-size:100% ;
+	position: absolute;
+	left: calc(50% - 40px);
+	top:calc(50% - 44px);
+	width: 80px;
+	height: 70px;
+}
+
+
+/*---------------------布局转换-----------------------------*/
+			.file-container.colum{
+				overflow: auto;
+				padding: 20px 0px 0px 10px;
+				box-sizing: border-box;
+				overflow: auto;
+				width: 100%;
+				height: 100%;
+				background: #FFF5EE;
+			}
+			.file-container.colum .fileitem{
+				width: 100%;
+				height: 40px;
+				background: antiquewhite;
+				position: relative;
+			}
+			/*回收站*/
+			#rec.colum .fileitem .pic{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				background: url(../image/recycle/file.png)no-repeat center;
+				background-size:100% ;
+				left: 4%;
+				top: 4px;
+			}
+			
+			.file-container.colum .fileitem .pic{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				background: url(../image/file.png)no-repeat center;
+				background-size:100% ;
+				left: 4%;
+				top: 0px;
+			}
+			
+			.file-container.colum .fileitem .pic.img{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				background: url(../image/file.png)no-repeat center;
+				background-size:100% ;
+				left: 4%;
+				top: 2px;
+			}
+			.file-container.colum .fileitem .name{
+				position: absolute;
+				left: 120px;
+				top: 0px;
+				display: flex;
+				height: 100%;
+				width: 160px;
+				font-size: 14px;
+				justify-content: flex-start;
+				align-items:  center;
+			}
+			.file-container.colum .name span{
+				display: block;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.file-container.colum .name  input{
+				display: none;
+				text-align: center;
+			}
+			.file-container.colum .type{
+				width: 50px;
+				height: 100%;
+				position: absolute;
+				right: 20%;
+				display: flex;
+				align-items: center;
+				font-size: 12px;
+			}
+			
+			.file-container.colum .fileitem.active{
+				background: silver;
+			}
+			.file-container.colum .fileitem.active:hover{
+				background: silver;
+			}
+			.file-container.colum .fileitem:hover{
+				background: silver;
+			}
+			
+
+/*----------------------布局转换---------------------------------*/
+.imgShowBox{
+	transition: 200ms;
+	transform: scale(0);
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+}
+
+.imgShow{
+	position: absolute;
+	width: 60%;
+	height: 60%;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background-image: url(../image/pic/timg.jpg);
+	background-repeat:no-repeat ;
+	background-size:100% ;
+}
+
+.imgShowBox .btnimg{
+	position: absolute;
+	border: none;
+	width: 50px;
+	height: 50px;
+	right: 50px;
+	top: 50px;
+	background: url(../image/shut.png)no-repeat center;
+	background-size:100% ;
+}
+
+.menu{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 160px;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius:8px ;
+	box-shadow: 2px 2px 8px black;
+}
+.menu span{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 10px 10px 50px;
+	cursor: pointer;
+	font: 16px/40px "微软雅黑";
+}
+.menu a{
+	display: block;
+	width: 100%;
+}
+.menu a:hover{
+	border-radius: 10px;
+	background: #F6F6F6;
+}
+
+
+.blur{
+ 	-webkit-filter: blur(4px); /* Chrome, Opera */
+	-moz-filter: blur(4px);
+	-ms-filter: blur(4px);    
+	filter: blur(4px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+
+.listShow{
+	border-radius:6px ;
+	transition: height  200ms;
+	cursor: pointer;
+	position: absolute;
+	box-shadow: 0px 0px 8px black;
+	width: 480px;
+	/*height: 400px;*/
+	height: 0;
+	opacity: 0;
+	left: -9999px;
+	top: -9999px;
+}
+.listShow.active{
+	left:calc(50% - 240px);
+	top: calc(50% - 200px);
+	opacity: 1;
+	height:400px;
+}
+.listShow .moveplace{
+	width: 100%;
+	height: 60px;
+	background: sandybrown;
+	display: flex;
+}
+.moveplace button{
+	background-color: #d9d9d9;
+	background-size:30% ;
+	border: none;
+	flex: 1;
+}
+.moveplace button:nth-of-type(1){
+	background-image: url(../image/cloud.png);
+	background-size:20% ;
+	background-repeat:no-repeat ;
+	background-position:center center; 
+}
+.moveplace button:nth-of-type(2){
+	background-image: url(../image/rub_circle.png);
+	background-repeat:no-repeat ;
+	background-position:center center; 
+}
+.moveplace button:nth-of-type(1).active{
+	background-color: indianred;
+}
+.moveplace button:nth-of-type(2).active{
+	background-color: green;
+}
+.listShow .listBtn {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	bottom: 0px;
+	right: 0px;
+}
+.listShow .listBtn button{
+	width: 104px;
+	height: 33px;
+	background: #fff;
+	border-radius:6px ;
+	border: 1px solid darkgray;
+	margin-left: 4px;
+}
+.listShow .listShowBox{
+	overflow: auto;
+	width: 100%;
+	border-bottom: 2px solid #F6F6F6;
+	height: 300px;
+	font: 14px/20px "微软雅黑";
+	border-radius:6px ;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.listShow .rubbishBox{
+	overflow: auto;
+	padding: 20px;
+	font: 14px/20px "微软雅黑";
+	border-bottom: 2px solid #F6F6F6;
+	display: none;
+	width: 100%;
+	height: 300px;
+	box-sizing: border-box;
+	border-radius:6px ;
+	background: #fff url(../image/circlegrey.png) no-repeat center center;
+}
+.listShow .rubbishBox  span em{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 20px;
+	top: 0px;
+	background:url(../image/recycle/file.png)no-repeat center;
+	background-size: 100% ;
+}
+
+.listShow ul ul {
+	display: none;
+	padding-left: 30px;
+}
+.listShow ul ul.active{
+	display: block;
+}
+.listShow ul span:hover{
+	color: skyblue ;
+}
+.listShow span{
+	position: relative;
+	width: 400px;
+	box-sizing: border-box;
+	padding-left: 50px;
+}
+
+.listShow ul span strong{
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	left: 0px;
+	top: 2px;
+	background:url(../image/filecanshow.png)no-repeat ;
+	background-size: 100% ;
+}
+
+.listShow ul span em{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 20px;
+	top: 0px;
+	background:url(../image/file.png)no-repeat ;
+	background-size: 100% ;
+}
+
+.listShow ul span em.img{
+	top: 6px;
+	width: 20px;
+	height: 20px;
+}
+.listShow ul ul ul.active{
+	display: block;
+}
+.listShow ul span strong.active{
+	background:url(../image/fileshow.png)no-repeat ;
+	background-size: 100% ;
+}
