@@ -4,6 +4,14 @@
 标签（空格分隔）： 微云
 
 [TOC]
+## 截图
+> 
+![添加删除][2]
+![进入文件夹][3]
+![复制移动][4]
+![拖拽移动][5]
+![回收站][6]
+![布局转换][7]
 ##功能分析
 
  1. 点击文件夹
@@ -111,3 +119,9 @@
 
 
   [1]: https://helloforrestworld.github.io/javascriptLab/%E5%BE%AE%E4%BA%91/index.html
+  [2]: https://helloforrestworld.github.io/wangpan/screen_shot/%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4.gif
+  [3]: https://helloforrestworld.github.io/wangpan/screen_shot/%E8%BF%9B%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9.gif
+  [4]: https://helloforrestworld.github.io/wangpan/screen_shot/%E5%A4%8D%E5%88%B6%E7%A7%BB%E5%8A%A8.gif
+  [5]: https://helloforrestworld.github.io/wangpan/screen_shot/%E6%8B%96%E6%8B%BD%E7%A7%BB%E5%8A%A8.gif
+  [6]: https://helloforrestworld.github.io/wangpan/screen_shot/%E5%9B%9E%E6%94%B6%E7%AB%99.gif
+  [7]: https://helloforrestworld.github.io/wangpan/screen_shot/%E5%B8%83%E5%B1%80%E8%BD%AC%E6%8D%A2.gif

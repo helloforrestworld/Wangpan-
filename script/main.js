@@ -21,7 +21,7 @@ var fileWrap = document.querySelector('.file-box');
 
 var isRec = fileBox.classList.contains('rec');  //如果是回收站页面 调用另外一套数据
 var data = getData()||user_data;
-
+// setData()
 var arrCheck=[];//粘贴板
 
 var nowId=isRec?8:0; //当前显示目录的id  默认是回收站或者云盘根目录  

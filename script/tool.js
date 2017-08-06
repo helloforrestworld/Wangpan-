@@ -477,13 +477,20 @@ function paste(){
 		})
 	};
 	
-	
+	if(arrCopyBox.length){
+		copyFile(arrCopyBox)
+	}
 	
 	function copyFile(arrCopy){
+		var newId = 0;
 		arrCopy.forEach(function(item){
 			for(var i = 0;i<item.length;i++){
-				if(i===0)data[nowId].childrenId.push({id:item[i].id});
-				data[item[i].id] = item[i];
+				newId = maxId(data);
+				data[nowId].childrenId.push({id:newId});
+				item[i].pId = nowId;
+				item[i].id = newId;
+				data[newId] = item[i];
+				console.log(data)
 			}
 		})
 		arrCheck=[];//粘贴板
