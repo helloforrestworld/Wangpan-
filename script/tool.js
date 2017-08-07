@@ -494,6 +494,7 @@ function paste(){
 		})
 		arrCheck=[];//粘贴板
 		reload();
+		console.log('结束')
 	}
 }
 
