@@ -477,6 +477,7 @@ function paste(){
 		})
 	};
 	
+	// 没有重名的部分
 	if(arrCopyBox.length){
 		copyFile(arrCopyBox)
 	}
@@ -484,14 +485,12 @@ function paste(){
 	function copyFile(arrCopy){
 		var newId = 0;
 		arrCopy.forEach(function(item){
-			for(var i = 0;i<item.length;i++){
-				newId = maxId(data);
+				newId = item[0].id
 				data[nowId].childrenId.push({id:newId});
-				item[i].pId = nowId;
-				item[i].id = newId;
-				data[newId] = item[i];
-				console.log(data)
-			}
+				item[0].pId = nowId;
+				for(var i = 0; i < item.length;i++){
+					data[item[i].id] = item[i];
+				}
 		})
 		arrCheck=[];//粘贴板
 		reload();

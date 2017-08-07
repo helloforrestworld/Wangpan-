@@ -78,7 +78,6 @@ function addFiles(file){
 
 //生成左侧导航列表
 function creatList(dataRoot){
-	
 	var str = ``,childId = dataRoot.childrenId,len = childId.length,i;
 	var type = dataRoot.type;
 		if(type === 'folder'){
