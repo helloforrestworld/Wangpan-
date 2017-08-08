@@ -427,7 +427,7 @@ function copy(){
 }
 //粘贴
 function paste(){
-	
+	console.log(1);
 	arrCopyBox  = [];
 	arrCheck.forEach(function(item){
 		arrCopyBox.push(deepCopy(item,nowId));
