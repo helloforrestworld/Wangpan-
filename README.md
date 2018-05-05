@@ -118,7 +118,7 @@
 //当移动或者复制 名字重复的时候   弹出所有重复项的处理框
 
 
-  [1]: https://helloforrestworld.github.io/wangpan/index.html
+  [1]: http://www.hasakei66.com:3004/
   [2]: https://helloforrestworld.github.io/wangpan/screen_shot/%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4.gif
   [3]: https://helloforrestworld.github.io/wangpan/screen_shot/%E8%BF%9B%E5%85%A5%E6%96%87%E4%BB%B6%E5%A4%B9.gif
   [4]: https://helloforrestworld.github.io/wangpan/screen_shot/%E5%A4%8D%E5%88%B6%E7%A7%BB%E5%8A%A8.gif
